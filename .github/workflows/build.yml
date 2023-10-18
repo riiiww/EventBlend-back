@@ -1,4 +1,38 @@
-  GNU nano 5.8                       build.yml
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Create env file
+      run: |
+        touch .env
+        echo "${{ secrets.ENV }}" > .env
+        cat .env
+        
+    - name: Install npm dependencies
+      run: npm install
+
+    - name: Run build task
+      run: npm run build --if-present
+      
+    - name: Install PM2
+      run: npm install pm2 -g
+
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@main
       with:
@@ -18,5 +52,3 @@
         pm2 kill
         cd /home/ec2-user/event-blend/
         pm2 start npm --name "event-blend" -- start -- --port 3000
-
-
