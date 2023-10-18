@@ -52,3 +52,4 @@ jobs:
         pm2 kill
         cd /home/ec2-user/event-blend/
         pm2 start npm --name "event-blend" -- start -- --port 3000
+        '
