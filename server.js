@@ -313,7 +313,7 @@ server.post('/uploadImage', upload.single('image'), (req, res) => {
 
     fs.writeFileSync(imagePath, req.file.buffer);
 
-    const imageUrl = `http://localhost:3000/${imagePath}`;
+    const imageUrl = `http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/${imagePath}`;
     res.status(201).json({ imageUrl });
   } catch (error) {
     console.error('Error uploading image:', error);
@@ -335,7 +335,7 @@ server.post('/uploadImageAds', upload.single('image'), (req, res) => {
 
     fs.writeFileSync(imagePath, req.file.buffer);
 
-    const imageUrl = `http://localhost:3000/${imagePath}`;
+    const imageUrl = `http://ec2-51-20-95-148.eu-north-1.compute.amazonaws.com:3002/${imagePath}`;
     res.status(201).json({ imageUrl });
   } catch (error) {
     console.error('Error uploading image:', error);
