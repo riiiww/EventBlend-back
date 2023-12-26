@@ -1,0 +1,26 @@
+{
+    "users": [
+      {
+        "id": 1700862136345,
+        "email": "riww@gmail.com",
+        "password": "$2b$10$0Fg9KSPEiaUyGqHsYyPQU.6py57GQBUkmlGj183nE44qnZelMuEP2",
+        "login": "riwww",
+        "role": "Organizer"
+      },
+      {
+        "id": 1700944373772,
+        "email": "riwwww@gmail.com",
+        "password": "$2b$10$P0qg0dJmlWlNXSf2wLJ5.O2n.lw.Gr/yo1fOtQrP5a4cLicH2z6.u",
+        "login": "riwwww",
+        "role": "Organizer"
+      },
+      {
+        "id": 1703614462095,
+        "email": "fotan.renata@student.uzhnu.edu.ua",
+        "password": "$2b$10$Lo2jm2X3LZ93NZs48M.DIe0msQ.txRaUaCzNF4/uXpSzW0OGPu/W.",
+        "login": "rywww"
+      }
+    ],
+    "events": [],
+    "ads": []
+  }
